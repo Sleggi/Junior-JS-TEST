@@ -1,0 +1,12 @@
+Задача 1
+Написать CURL гипотетического метода, который обновляет количество товаров в корзине пользователя.
+Параметры должны включать номер магазина и номер региона,
+хедеры - токен авторизации,
+в теле должен передаваться json: массив объектов с полями: артикул и количество товара.
+Сервис, которому принадлеит метод хостится по адресу mymobileshop.ru/basket/v2.
+
+curl -X PUT -H "Accept: application/json"
+      	      -H "Authorization: Bearer {token}"
+  		-H "Content-Type: application/json"
+                 -d ‘{"vendor":"vendorNum", "product":"productAmount"}’
+https://mymobileshop.ru/basket/v2?shop={shopNum}&reg={regNum}
